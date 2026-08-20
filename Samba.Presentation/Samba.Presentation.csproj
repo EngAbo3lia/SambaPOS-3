@@ -136,6 +136,9 @@
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ToastHostControl.xaml.cs">
+      <DependentUpon>ToastHostControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WorkPeriodStatusView.xaml.cs">
       <DependentUpon>WorkPeriodStatusView.xaml</DependentUpon>
     </Compile>
@@ -187,6 +190,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\PosLite\PosLiteBrushes.Dark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\PosLite\PosLiteBrushes.Light.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\PosLite\PosLiteControls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ToastHostControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WorkPeriodStatusView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -200,6 +219,10 @@
     <ProjectReference Include="..\Lib\FastButton\FastButton.csproj">
       <Project>{7519cb8c-3c25-4f74-8946-93ecb7450c31}</Project>
       <Name>FastButton</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\FlexButton\FlexButton.csproj">
+      <Project>{434D497A-D439-44C8-84A5-5301B572708F}</Project>
+      <Name>FlexButton</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samba.Localization\Samba.Localization.csproj">
       <Project>{406B96A6-C886-4149-AD88-A2402EDB2B90}</Project>
@@ -332,6 +355,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\apple-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Themes\PosLite\Images\Bmp.png" />
+    <Resource Include="Themes\PosLite\Images\box.png" />
+    <Resource Include="Themes\PosLite\Images\dcn.png" />
+    <Resource Include="Themes\PosLite\Images\Network.png" />
+    <Resource Include="Themes\PosLite\Images\note.png" />
+    <Resource Include="Themes\PosLite\Images\Png.png" />
+    <Resource Include="Themes\PosLite\Images\Ppt.png" />
+    <Resource Include="Themes\PosLite\Images\Run.png" />
+    <Resource Include="Themes\PosLite\Images\Tools.png" />
+    <Resource Include="Themes\PosLite\Images\Xls.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="apple.ico" />

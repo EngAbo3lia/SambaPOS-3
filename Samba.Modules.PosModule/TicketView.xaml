@@ -20,7 +20,7 @@
         </Grid.ColumnDefinitions>
         <!--TITLE AREA-->
         <Label Name="TitleLabel" Grid.Row="0" Grid.Column="1" Content="{Binding SelectedTicketTitle}" Margin="0,0,3,0"
-                     FontWeight="Bold" FontSize="18" Background="DarkGray" Foreground="WhiteSmoke" BorderThickness="0">
+                     FontWeight="SemiBold" FontSize="20" Background="{DynamicResource PosLiteHeaderBackgroundBrush}" Foreground="{DynamicResource PosLiteHeaderForegroundBrush}" BorderThickness="0" Padding="12,8">
         </Label>
 
         <!--ORDERS AREA-->

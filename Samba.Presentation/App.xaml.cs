@@ -3,6 +3,7 @@ using System.Windows;
 using Microsoft.Practices.ServiceLocation;
 using Samba.Infrastructure.Messaging;
 using Samba.Presentation.Common.ErrorReport;
+using Samba.Presentation.Common.Services;
 using Samba.Presentation.Services;
 using Samba.Services.Common;
 
@@ -16,6 +17,7 @@ namespace Samba.Presentation
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+            ThemeManager.ApplySavedTheme();
 #if (DEBUG)
             RunInDebugMode();
 #else

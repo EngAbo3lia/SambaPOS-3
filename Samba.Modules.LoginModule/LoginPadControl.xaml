@@ -4,152 +4,19 @@
              x:Class="Samba.Modules.LoginModule.LoginPadControl"
      mc:Ignorable="d" Loaded="UserControl_Loaded">
     <UserControl.Resources>
-        <Style x:Key="ButtonFocusVisual">
-            <Setter Property="Control.Template">
-                <Setter.Value>
-                    <ControlTemplate>
-                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
-                             StrokeThickness="1" StrokeDashArray="1 2" />
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
-            <GradientStop Color="#FFB9EFA9" Offset="0" />
-            <GradientStop Color="#FF288D09" Offset="1" />
-        </LinearGradientBrush>
-        <SolidColorBrush Color="#B7707070" x:Key="ButtonNormalBorder" />
-        <Style x:Key="GreenButtonStyle" TargetType="{x:Type Button}">
-            <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}" />
-            <Setter Property="Background" Value="{DynamicResource ButtonNormalBackground}" />
-            <Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}" />
-            <Setter Property="BorderThickness" Value="1" />
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
-            <Setter Property="HorizontalContentAlignment" Value="Center" />
-            <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Style x:Key="GreenButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource PosLiteButton}">
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="24" />
             <Setter Property="Padding" Value="1" />
             <Setter Property="Focusable" Value="False"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Microsoft_Windows_Themes:ButtonChrome x:Name="Chrome" BorderBrush="{TemplateBinding BorderBrush}"
-                             RenderMouseOver="{TemplateBinding IsMouseOver}" RenderPressed="{TemplateBinding IsPressed}"
-                             RenderDefaulted="{TemplateBinding IsDefaulted}" SnapsToDevicePixels="true" OpacityMask="{x:Null}"
-                             Background="{TemplateBinding Background}">
-                            <Microsoft_Windows_Themes:ButtonChrome.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
-                                </TransformGroup>
-                            </Microsoft_Windows_Themes:ButtonChrome.RenderTransform>
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Normal" />
-                                    <VisualState x:Name="MouseOver" />
-                                    <VisualState x:Name="Pressed" />
-                                    <VisualState x:Name="Disabled" />
-                                </VisualStateGroup>
-                                <VisualStateGroup x:Name="FocusStates">
-                                    <VisualState x:Name="Unfocused" />
-                                    <VisualState x:Name="Focused" />
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                 Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}" OpacityMask="{x:Null}" />
-                        </Microsoft_Windows_Themes:ButtonChrome>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="ToggleButton.IsChecked" Value="true">
-                                <Setter Property="Background">
-                                    <Setter.Value>
-                                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                                            <GradientStop Color="#FFB9EFA9" Offset="0" />
-                                            <GradientStop Color="#FFB87A63" Offset="1" />
-                                        </LinearGradientBrush>
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Foreground" Value="#ADADAD" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="FontSize" Value="24" />
-            <Setter Property="OpacityMask" Value="{x:Null}" />
+            <Setter Property="BorderThickness" Value="0"/>
         </Style>
-        <Style x:Key="SubmitButtonStyle" TargetType="{x:Type Button}">
-            <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}" />
-            <Setter Property="Background">
-                <Setter.Value>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFFBE0A3" Offset="0" />
-                        <GradientStop Color="#FFD24D00" Offset="1" />
-                    </LinearGradientBrush>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}" />
-            <Setter Property="BorderThickness" Value="1" />
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
-            <Setter Property="HorizontalContentAlignment" Value="Center" />
-            <Setter Property="VerticalContentAlignment" Value="Center" />
-            <Setter Property="Padding" Value="1" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Microsoft_Windows_Themes:ButtonChrome x:Name="Chrome" BorderBrush="{TemplateBinding BorderBrush}"
-                             RenderMouseOver="{TemplateBinding IsMouseOver}" RenderPressed="{TemplateBinding IsPressed}"
-                             RenderDefaulted="{TemplateBinding IsDefaulted}" SnapsToDevicePixels="true" OpacityMask="{x:Null}"
-                             Background="{TemplateBinding Background}">
-                            <Microsoft_Windows_Themes:ButtonChrome.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform />
-                                    <SkewTransform />
-                                    <RotateTransform />
-                                    <TranslateTransform />
-                                </TransformGroup>
-                            </Microsoft_Windows_Themes:ButtonChrome.RenderTransform>
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Normal" />
-                                    <VisualState x:Name="MouseOver" />
-                                    <VisualState x:Name="Pressed" />
-                                    <VisualState x:Name="Disabled" />
-                                </VisualStateGroup>
-                                <VisualStateGroup x:Name="FocusStates">
-                                    <VisualState x:Name="Unfocused" />
-                                    <VisualState x:Name="Focused" />
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                 Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}" OpacityMask="{x:Null}" />
-                        </Microsoft_Windows_Themes:ButtonChrome>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="ToggleButton.IsChecked" Value="true">
-                                <Setter Property="Background">
-                                    <Setter.Value>
-                                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                                            <GradientStop Color="#FFB9EFA9" Offset="0" />
-                                            <GradientStop Color="#FFB87A63" Offset="1" />
-                                        </LinearGradientBrush>
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Foreground" Value="#ADADAD" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
+        <Style x:Key="SubmitButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource PosLitePrimaryButton}">
             <Setter Property="FontWeight" Value="Bold" />
             <Setter Property="FontSize" Value="24" />
-            <Setter Property="OpacityMask" Value="{x:Null}" />
+            <Setter Property="Padding" Value="1" />
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="BorderThickness" Value="0"/>
         </Style>
     </UserControl.Resources>
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Focusable="False">

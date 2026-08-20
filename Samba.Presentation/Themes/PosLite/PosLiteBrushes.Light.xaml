@@ -1,0 +1,50 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- ============================================ -->
+    <!-- POS Lite Theme - Light brushes               -->
+    <!-- Swapped at runtime by ThemeManager           -->
+    <!-- ============================================ -->
+
+    <!-- Surfaces -->
+    <SolidColorBrush x:Key="PosLiteWindowBackgroundBrush" Color="#F3F5F7"/>
+    <SolidColorBrush x:Key="PosLiteSurfaceBrush" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="PosLiteSurfaceAltBrush" Color="#FAFBFC"/>
+    <SolidColorBrush x:Key="PosLiteBorderBrush" Color="#E1E5EA"/>
+    <SolidColorBrush x:Key="PosLiteTableHeaderBrush" Color="#EEF1F5"/>
+    <SolidColorBrush x:Key="PosLiteTableAlternatingBrush" Color="#F7F9FB"/>
+    <SolidColorBrush x:Key="PosLiteInputBackgroundBrush" Color="#FFFFFF"/>
+
+    <!-- Text -->
+    <SolidColorBrush x:Key="PosLiteTextBrush" Color="#212529"/>
+    <SolidColorBrush x:Key="PosLiteMutedTextBrush" Color="#6C757D"/>
+
+    <!-- Header / Footer -->
+    <SolidColorBrush x:Key="PosLiteHeaderBackgroundBrush" Color="#23262B"/>
+    <SolidColorBrush x:Key="PosLiteHeaderForegroundBrush" Color="#EDEEF0"/>
+    <SolidColorBrush x:Key="PosLiteFooterBackgroundBrush" Color="#E8EBEF"/>
+
+    <!-- Primary (amber accent) -->
+    <SolidColorBrush x:Key="PosLitePrimaryBrush" Color="#C2800A"/>
+    <SolidColorBrush x:Key="PosLitePrimaryHoverBrush" Color="#D9910E"/>
+    <SolidColorBrush x:Key="PosLitePrimaryPressedBrush" Color="#A86E08"/>
+    <SolidColorBrush x:Key="PosLitePrimaryForegroundBrush" Color="#FFFFFF"/>
+
+    <!-- Neutral buttons -->
+    <SolidColorBrush x:Key="PosLiteButtonBackgroundBrush" Color="#E9ECEF"/>
+    <SolidColorBrush x:Key="PosLiteButtonHoverBackgroundBrush" Color="#DEE2E6"/>
+    <SolidColorBrush x:Key="PosLiteButtonPressedBackgroundBrush" Color="#CED4DA"/>
+    <SolidColorBrush x:Key="PosLiteButtonForegroundBrush" Color="#212529"/>
+
+    <!-- Status -->
+    <SolidColorBrush x:Key="PosLiteSuccessBrush" Color="#28A745"/>
+    <SolidColorBrush x:Key="PosLiteSuccessHoverBrush" Color="#2FB84C"/>
+    <SolidColorBrush x:Key="PosLiteDangerBrush" Color="#DC3545"/>
+    <SolidColorBrush x:Key="PosLiteDangerHoverBrush" Color="#E14A58"/>
+    <SolidColorBrush x:Key="PosLiteWarningBrush" Color="#C9A000"/>
+    <SolidColorBrush x:Key="PosLiteInfoBrush" Color="#17A2B8"/>
+
+    <!-- Chrome extras -->
+    <SolidColorBrush x:Key="PosLiteScrollThumbBrush" Color="#C3C8CF"/>
+    <SolidColorBrush x:Key="PosLiteTooltipBackgroundBrush" Color="#2B2F36"/>
+</ResourceDictionary>

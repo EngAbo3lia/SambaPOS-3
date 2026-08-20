@@ -1,7 +1,7 @@
 ﻿<UserControl x:Class="Samba.Modules.LoginModule.LoginView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Login1="clr-namespace:Samba.Modules.LoginModule" mc:Ignorable="d" d:DesignWidth="774" Background="{StaticResource {x:Static SystemColors.ControlLightBrushKey}}"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Login1="clr-namespace:Samba.Modules.LoginModule" mc:Ignorable="d" d:DesignWidth="774" Background="{DynamicResource PosLiteWindowBackgroundBrush}"
      PreviewTextInput="UserControl_PreviewTextInput" PreviewKeyDown="UserControl_PreviewKeyDown">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -15,7 +15,7 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         <Image Grid.Column="0" Stretch="None" Source="{Binding LogoPath}" VerticalAlignment="Center"
              HorizontalAlignment="Center">
         </Image>
-        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" FontSize="30" FontWeight="Black" Foreground="WhiteSmoke" Text="{Binding AppLabel}"
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" FontSize="30" FontWeight="Black" Foreground="{DynamicResource PosLitePrimaryBrush}" Text="{Binding AppLabel}"
              Margin="5,0,0,0">
             <TextBlock.Effect>
                 <DropShadowEffect Opacity="0.3" ShadowDepth="1" BlurRadius="3">
@@ -23,18 +23,21 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             </TextBlock.Effect>
         </TextBlock>
         <StackPanel Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center">
-            <Border Grid.Column="1" Width="350" Height="400" CornerRadius="10" BorderThickness="2"
-                 BorderBrush="LightSteelBlue">
-                <Login1:LoginPadControl x:Name="PadControl" Margin="15" PinSubmitted="LoginPadControl_PinSubmitted" />
+            <Border Grid.Column="1" Width="360" Height="440" CornerRadius="12" BorderThickness="1"
+                 BorderBrush="{DynamicResource PosLiteBorderBrush}" Background="{DynamicResource PosLiteSurfaceBrush}">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="24" ShadowDepth="4" Opacity="0.18"/>
+                </Border.Effect>
+                <Login1:LoginPadControl x:Name="PadControl" Margin="20" PinSubmitted="LoginPadControl_PinSubmitted" />
             </Border>
-            <TextBlock FontSize="14" HorizontalAlignment="Center" Text="{Binding AdminPasswordHint}"
-                 TextAlignment="Center" />
-            <Button HorizontalAlignment="Center" MinWidth="110" Height="50" FontWeight="Bold" FontSize="18"
-                 Margin="5" Click="Button_Click">
-                <DockPanel>
-                    <Image Source="Images/LanShutDown.icon.gif" Stretch="None"/>
-                    <Label Content="{LocText Exit}"/>                    
-                </DockPanel>
+            <TextBlock FontSize="13" Foreground="{DynamicResource PosLiteMutedTextBrush}" HorizontalAlignment="Center" Text="{Binding AdminPasswordHint}"
+                 TextAlignment="Center" Margin="0,10,0,0" />
+            <Button HorizontalAlignment="Center" MinWidth="120" Height="46" FontWeight="SemiBold" FontSize="15"
+                 Margin="5" Click="Button_Click" Style="{StaticResource PosLiteGhostButton}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images/LanShutDown.icon.gif" Stretch="None" VerticalAlignment="Center"/>
+                    <TextBlock Text="{LocText Exit}" VerticalAlignment="Center" Margin="6,0,0,0"/>
+                </StackPanel>
             </Button>
         </StackPanel>
     </Grid>

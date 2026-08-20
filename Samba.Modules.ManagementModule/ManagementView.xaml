@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Samba.Modules.ManagementModule.ManagementView"
+<UserControl x:Class="Samba.Modules.ManagementModule.ManagementView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -11,7 +11,7 @@
         <ResourceDictionary Source="Resources.xaml"/>
      </UserControl.Resources>
     
-    <Grid Background="{StaticResource {x:Static SystemColors.WindowBrushKey}}">
+    <Grid Background="{DynamicResource PosLiteWindowBackgroundBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
@@ -35,7 +35,7 @@
             </ContentControl.Resources>
         </ContentControl>
         
-        <GridSplitter Background="{StaticResource {x:Static SystemColors.ActiveBorderBrushKey}}" Grid.Column="1" Grid.Row="1" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="1" />
+        <GridSplitter Background="{DynamicResource PosLiteBorderBrush}" Grid.Column="1" Grid.Row="1" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="1" />
         <Viewbox Grid.Column="1" Grid.Row="2" Margin="1">
             <VirtualKeyboard:KeyboardView ></VirtualKeyboard:KeyboardView>
         </Viewbox>

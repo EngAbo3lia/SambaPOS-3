@@ -33,10 +33,11 @@ namespace Samba.Infrastructure.Settings
 
         public string PrintFontFamily { get; set; }
 
-        private readonly SerializableDictionary<string, string> _customSettings;
+        private SerializableDictionary<string, string> _customSettings;
         public SerializableDictionary<string, string> CustomSettings
         {
             get { return _customSettings; }
+            set { _customSettings = value ?? new SerializableDictionary<string, string>(); }
         }
 
         public SettingsObject()

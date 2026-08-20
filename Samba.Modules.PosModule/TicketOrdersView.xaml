@@ -16,7 +16,7 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
-    <Border BorderThickness="1" BorderBrush="{StaticResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+    <Border BorderThickness="1" BorderBrush="{DynamicResource PosLiteBorderBrush}">
         <ScrollViewer Focusable="False" Name="Scroller" UIControls:KineticBehaviour.HandleKineticScrolling="True" VerticalScrollBarVisibility="Auto">
             <ItemsControl BorderThickness="0" Background="{Binding TicketBackground}" AlternationCount="2"
                              ItemsSource="{Binding ItemsViewSource.View}" HorizontalContentAlignment="Stretch">
@@ -33,16 +33,16 @@
                                                     <RowDefinition Height="auto" />
                                                     <RowDefinition Height="*" />
                                                 </Grid.RowDefinitions>
-                                                <Border BorderThickness="0,0,0,1" BorderBrush="Gainsboro">
+                                                <Border BorderThickness="0,0,0,1" BorderBrush="{DynamicResource PosLiteBorderBrush}">
                                                     <Grid Grid.Row="0">
                                                         <Grid.ColumnDefinitions>
                                                             <ColumnDefinition Width="auto"/>
                                                             <ColumnDefinition Width="*"/>
                                                         </Grid.ColumnDefinitions>
                                                         <TextBlock Margin="15,0,0,0" Grid.Column="0" Text="{Binding Name.OrderNumber}" FontWeight="Bold"
-                                                                        Foreground="Gray" Style="{StaticResource GroupLabelStyle}" />
+                                                                        Foreground="{DynamicResource PosLiteMutedTextBrush}" Style="{StaticResource GroupLabelStyle}" />
                                                         <TextBlock Margin="5,0,0,0" Grid.Column="1" Text="{Binding Name.Time}" FontWeight="Bold"
-                                                                        Foreground="Gray" Style="{StaticResource GroupLabelStyle}" />
+                                                                        Foreground="{DynamicResource PosLiteMutedTextBrush}" Style="{StaticResource GroupLabelStyle}" />
                                                     </Grid>
                                                 </Border>
                                                 <ItemsPresenter Grid.Row="1" />
@@ -81,7 +81,7 @@
                                                          TextTrimming="CharacterEllipsis" Margin="5" />
 
                                         <TextBlock TextDecorations="{Binding TextDecoration}"
-                                                         Padding="1" Foreground="Gray" FontSize="12" Grid.Column="2" Text="{Binding PriceTag}"
+                                                         Padding="1" Foreground="{DynamicResource PosLiteMutedTextBrush}" FontSize="12" Grid.Column="2" Text="{Binding PriceTag}"
                                                          HorizontalAlignment="Right" VerticalAlignment="Center"/>
 
                                         <TextBlock FontWeight="{Binding FontWeight}" TextDecorations="{Binding TextDecoration}" Grid.Column="3"
@@ -102,9 +102,9 @@
                                                         <ColumnDefinition Width="*" />
                                                         <ColumnDefinition Width="auto" />
                                                     </Grid.ColumnDefinitions>
-                                                    <TextBlock Grid.Column="0" Foreground="DarkBlue" FontSize="14" FontWeight="Bold" Text="{Binding DisplayString}"
+                                                    <TextBlock Grid.Column="0" Foreground="{DynamicResource PosLitePrimaryBrush}" FontSize="14" FontWeight="Bold" Text="{Binding DisplayString}"
                                                                      Margin="30,0,0,0" />
-                                                    <TextBlock Grid.Column="1" Foreground="DarkBlue" FontSize="14" FontWeight="Bold" Text="{Binding PriceString}"
+                                                    <TextBlock Grid.Column="1" Foreground="{DynamicResource PosLitePrimaryBrush}" FontSize="14" FontWeight="Bold" Text="{Binding PriceString}"
                                                                      Padding="1" Margin="0,0,5,0" HorizontalAlignment="Right" />
                                                 </Grid>
                                             </DataTemplate>

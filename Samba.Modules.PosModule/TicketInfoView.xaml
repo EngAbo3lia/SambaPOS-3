@@ -11,17 +11,17 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
-            <Border Background="{StaticResource {x:Static SystemColors.InfoBrushKey}}" BorderBrush="{StaticResource {x:Static SystemColors.ActiveBorderBrushKey}}"
+            <Border Background="{DynamicResource PosLiteSurfaceAltBrush}" BorderBrush="{DynamicResource PosLiteBorderBrush}"
                          BorderThickness="1,0,1,1" Visibility="{Binding IsTicketTagged,Converter={StaticResource VisibilityConverter},FallbackValue=Collapsed}">
                 <TextBlock Margin="3" TextTrimming="WordEllipsis" Text="{Binding TicketTagDisplay}" />
             </Border>
-            <Border Background="{StaticResource {x:Static SystemColors.InfoBrushKey}}" BorderBrush="{StaticResource {x:Static SystemColors.ActiveBorderBrushKey}}"
+            <Border Background="{DynamicResource PosLiteSurfaceAltBrush}" BorderBrush="{DynamicResource PosLiteBorderBrush}"
                          BorderThickness="1,0,1,1" Visibility="{Binding IsTicketNoteVisible,Converter={StaticResource VisibilityConverter},FallbackValue=Collapsed}">
                 <TextBlock Margin="3" TextTrimming="WordEllipsis" Text="{Binding Note}" />
             </Border>
         </StackPanel>
         <!--TICKET TIME AREA-->
-        <Border Grid.Row="1" BorderBrush="{StaticResource {x:Static SystemColors.ActiveBorderBrushKey}}"
+        <Border Grid.Row="1" BorderBrush="{DynamicResource PosLiteBorderBrush}"
                      BorderThickness="1,0,1,1" Visibility="{Binding IsTicketTimeVisible,Converter={StaticResource VisibilityConverter},FallbackValue=Collapsed}">
             <Grid Margin="3">
                 <Grid.RowDefinitions>

@@ -42,9 +42,9 @@
                             <ColumnDefinition Width="auto" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Foreground="DarkGreen" Margin="10,0,0,0" FontSize="14"
+                        <TextBlock Grid.Column="0" Foreground="{DynamicResource PosLiteSuccessBrush}" Margin="10,0,0,0" FontSize="14"
                                      TextAlignment="Left" Text="{Binding Name}" />
-                        <TextBlock Grid.Column="1" Foreground="DarkGreen" Margin="5,0,0,0" FontSize="14" TextAlignment="Right"
+                        <TextBlock Grid.Column="1" Foreground="{DynamicResource PosLiteSuccessBrush}" Margin="5,0,0,0" FontSize="14" TextAlignment="Right"
                                      Text="{Binding Amount}" />
                     </Grid>
                 </DataTemplate>
@@ -70,9 +70,9 @@
                             <ColumnDefinition Width="auto" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Foreground="DarkGreen" Margin="10,0,0,0" FontSize="14"
+                        <TextBlock Grid.Column="0" Foreground="{DynamicResource PosLiteSuccessBrush}" Margin="10,0,0,0" FontSize="14"
                                      TextAlignment="Left" Text="{Binding Name}" />
-                        <TextBlock Grid.Column="1" Foreground="DarkGreen" Margin="5,0,0,0" FontSize="14" TextAlignment="Right"
+                        <TextBlock Grid.Column="1" Foreground="{DynamicResource PosLiteSuccessBrush}" Margin="5,0,0,0" FontSize="14" TextAlignment="Right"
                                      Text="{Binding Amount}" />
                     </Grid>
                 </DataTemplate>
@@ -100,11 +100,11 @@
                             <ColumnDefinition Width="auto" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Foreground="DarkGreen" Margin="10,0,0,0" FontSize="14"
+                        <TextBlock Grid.Column="0" Foreground="{DynamicResource PosLiteSuccessBrush}" Margin="10,0,0,0" FontSize="14"
                                      TextAlignment="Left" Text="{Binding DateDisplay}" />
-                        <TextBlock Grid.Column="1" Foreground="DarkGreen" Margin="10,0,0,0" FontSize="14"
+                        <TextBlock Grid.Column="1" Foreground="{DynamicResource PosLiteSuccessBrush}" Margin="10,0,0,0" FontSize="14"
                                      TextAlignment="Left" Text="{Binding PaymentTypeDisplay}" />
-                        <TextBlock Grid.Column="2" Foreground="DarkGreen" Margin="5,0,0,0" FontSize="14" TextAlignment="Right"
+                        <TextBlock Grid.Column="2" Foreground="{DynamicResource PosLiteSuccessBrush}" Margin="5,0,0,0" FontSize="14" TextAlignment="Right"
                                      Text="{Binding AmountDisplay}" />
                     </Grid>
                 </DataTemplate>
@@ -116,9 +116,9 @@
         <TextBlock Grid.Column="1" Grid.Row="9" TextAlignment="Right" Text="{Binding TicketChangePaymentLabel}"
                      Visibility="{Binding IsTicketChangePaymentVisible,Converter={StaticResource VisibilityConverter}}" />
 
-        <TextBlock Grid.Column="0" FontSize="20" Grid.Row="10" FontWeight="Bold" Foreground="Red"
+        <TextBlock Grid.Column="0" FontSize="20" Grid.Row="10" FontWeight="Bold" Foreground="{DynamicResource PosLiteDangerBrush}"
                      Text="{LocText Balance,Suffix=':'}" Visibility="{Binding IsTicketRemainingVisible,Converter={StaticResource VisibilityConverter}}" />
-        <TextBlock Grid.Column="1" FontSize="20" Grid.Row="10" FontWeight="Bold" Foreground="Red"
+        <TextBlock Grid.Column="1" FontSize="20" Grid.Row="10" FontWeight="Bold" Foreground="{DynamicResource PosLiteDangerBrush}"
                      TextAlignment="Right" Text="{Binding TicketRemainingLabel}" Visibility="{Binding IsTicketRemainingVisible,Converter={StaticResource VisibilityConverter}}" />
     </Grid>
 </UserControl>

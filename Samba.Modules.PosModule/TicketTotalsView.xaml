@@ -28,9 +28,9 @@
                             <ColumnDefinition Width="auto" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Foreground="DarkGreen" Margin="10,0,0,0" FontSize="16"
+                        <TextBlock Grid.Column="0" Foreground="{DynamicResource PosLiteSuccessBrush}" Margin="10,0,0,0" FontSize="16"
                                      TextAlignment="Left" Text="{Binding Name}" />
-                        <TextBlock Grid.Column="1" Foreground="DarkGreen" Margin="5,0,0,0" FontSize="16" TextAlignment="Right"
+                        <TextBlock Grid.Column="1" Foreground="{DynamicResource PosLiteSuccessBrush}" Margin="5,0,0,0" FontSize="16" TextAlignment="Right"
                                      Text="{Binding Amount}" />
                     </Grid>
                 </DataTemplate>
@@ -59,9 +59,9 @@
                             <ColumnDefinition Width="auto" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Foreground="DarkGreen" Margin="10,0,0,0" FontSize="16"
+                        <TextBlock Grid.Column="0" Foreground="{DynamicResource PosLiteSuccessBrush}" Margin="10,0,0,0" FontSize="16"
                                      TextAlignment="Left" Text="{Binding Name}" />
-                        <TextBlock Grid.Column="1" Foreground="DarkGreen" Margin="5,0,0,0" FontSize="16" TextAlignment="Right"
+                        <TextBlock Grid.Column="1" Foreground="{DynamicResource PosLiteSuccessBrush}" Margin="5,0,0,0" FontSize="16" TextAlignment="Right"
                                      Text="{Binding Amount}" />
                     </Grid>
                 </DataTemplate>
@@ -89,9 +89,9 @@
         </DockPanel>
 
         <DockPanel>
-            <TextBlock FontSize="22" FontWeight="Bold" Foreground="Red" Text="{LocText Balance,Suffix=':'}"
+            <TextBlock FontSize="22" FontWeight="Bold" Foreground="{DynamicResource PosLiteDangerBrush}" Text="{LocText Balance,Suffix=':'}"
                          Visibility="{Binding IsTicketRemainingVisible,Converter={StaticResource VisibilityConverter}}" />
-            <TextBlock FontSize="22" FontWeight="Bold" Foreground="Red" TextAlignment="Right"
+            <TextBlock FontSize="22" FontWeight="Bold" Foreground="{DynamicResource PosLiteDangerBrush}" TextAlignment="Right"
                          Text="{Binding TicketRemainingLabel}" Visibility="{Binding IsTicketRemainingVisible,Converter={StaticResource VisibilityConverter}}" />
         </DockPanel>
     </StackPanel>

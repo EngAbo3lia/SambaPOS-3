@@ -148,6 +148,8 @@
     <Compile Include="Widgets\IDiagram.cs" />
     <Compile Include="IModuleInitializationService.cs" />
     <Compile Include="Services\InteractionService.cs" />
+    <Compile Include="Services\ThemeManager.cs" />
+    <Compile Include="Services\ToastService.cs" />
     <Compile Include="Commands\ICaptionCommand.cs" />
     <Compile Include="Commands\ICategoryCommand.cs" />
     <Compile Include="IUserInteraction.cs" />

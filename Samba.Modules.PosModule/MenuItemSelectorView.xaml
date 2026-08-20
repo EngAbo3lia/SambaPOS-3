@@ -61,7 +61,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <Border BorderThickness="1" BorderBrush="Silver">
+                <Border BorderThickness="1" BorderBrush="{DynamicResource PosLiteBorderBrush}">
                     <ListBox BorderThickness="0" ItemsSource="{Binding SelectedMenuItems}" UIControls:ListBoxBehavior.ScrollOnNewItem="true">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
@@ -103,14 +103,14 @@
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="ListBoxItem">
-                                    <Border Margin="0,0,4,4" Background="WhiteSmoke" Name="Border" BorderThickness="1"
-                                         CornerRadius="4" BorderBrush="Gray">
+                                    <Border Margin="0,0,4,4" Background="{DynamicResource PosLiteSurfaceBrush}" Name="Border" BorderThickness="1"
+                                         CornerRadius="4" BorderBrush="{DynamicResource PosLiteBorderBrush}">
                                         <ContentPresenter />
                                     </Border>
                                     <ControlTemplate.Triggers>
                                         <Trigger Property="IsSelected" Value="true">
                                             <Setter TargetName="Border" Property="BorderThickness" Value="2" />
-                                            <Setter Property="Foreground" Value="Red" />
+                                            <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource PosLitePrimaryBrush}" />
                                         </Trigger>
                                         <Trigger Property="IsEnabled" Value="false">
                                             <Setter Property="Foreground" Value="{StaticResource DisabledForegroundBrush}" />

@@ -10,6 +10,8 @@ namespace FlexButton
 {
     public class FontSizeToViewBoxDirectionConverter : IValueConverter
     {
+        public static readonly FontSizeToViewBoxDirectionConverter Instance = new FontSizeToViewBoxDirectionConverter();
+
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             return (double)value > 15 ? StretchDirection.DownOnly : StretchDirection.Both;

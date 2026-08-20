@@ -19,7 +19,7 @@
             </Style>
         </TabControl.ItemContainerStyle>
 
-        <Grid Name="Grid1" Background="{StaticResource {x:Static SystemColors.ControlLightBrushKey}}">
+        <Grid Name="Grid1" Background="{DynamicResource PosLiteWindowBackgroundBrush}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="45*"/>
                 <ColumnDefinition Width="55*"/>

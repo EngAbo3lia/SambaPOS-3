@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Samba.Modules.AutomationModule.ScriptView"
+<UserControl x:Class="Samba.Modules.AutomationModule.ScriptView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -17,7 +17,7 @@
             <Label Content="{LocText Handler,FormatSegment1={LocText Name_f},Suffix=':'}" />
             <TextBox Text="{Binding HandlerName}" MinWidth="200" HorizontalAlignment="Left" />
             <Label Content="{LocText Script,Suffix=':'}" />
-            <Border BorderThickness="1" BorderBrush="{StaticResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+            <Border BorderThickness="1" BorderBrush="{DynamicResource PosLiteBorderBrush}">
                 <avalonedit:TextEditor FontFamily="Lucida Console" FontSize="12" Document="{Binding ScriptText}" SyntaxHighlighting="SambaDSL" MinWidth="250" MinHeight="200" 
                                        HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible"/>
             </Border>

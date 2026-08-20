@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Samba.Modules.AccountModule.Dashboard.AccountScreenView"
+<UserControl x:Class="Samba.Modules.AccountModule.Dashboard.AccountScreenView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -23,7 +23,7 @@
             </StackPanel>
             <DataGrid ItemsSource="{Binding AccountScreenFilters}" MinHeight="100"
                       HorizontalAlignment="Left" GridLinesVisibility="None" RowHeaderWidth="0" Margin="0,3" CanUserAddRows="False" CanUserDeleteRows="False"
-                      AutoGenerateColumns="False" CanUserSortColumns="False" Background="{StaticResource {x:Static SystemColors.WindowBrushKey}}">
+                      AutoGenerateColumns="False" CanUserSortColumns="False" Background="{DynamicResource PosLiteSurfaceBrush}">
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="{LocText AccountType}" IsReadOnly="True"
@@ -43,7 +43,7 @@
             </StackPanel>
             <DataGrid ItemsSource="{Binding AutomationCommands}" MinHeight="100" MinWidth="200"
                       HorizontalAlignment="Left" GridLinesVisibility="None" RowHeaderWidth="0" Margin="0,3" CanUserAddRows="False" CanUserDeleteRows="False"
-                      AutoGenerateColumns="False" CanUserSortColumns="False" Background="{StaticResource {x:Static SystemColors.WindowBrushKey}}">
+                      AutoGenerateColumns="False" CanUserSortColumns="False" Background="{DynamicResource PosLiteSurfaceBrush}">
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="{LocText Name}" IsReadOnly="True" MinWidth="100" Binding="{Binding AutomationCommandName}" />

@@ -17,8 +17,8 @@
     
     <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="3" UIControls:KineticBehaviour.HandleKineticScrolling="True">
         <ItemsControl ItemsSource="{Binding Source={StaticResource cvs}}" HorizontalContentAlignment="Stretch"
-                     BorderBrush="{StaticResource {x:Static SystemColors.ActiveBorderBrushKey}}" 
-                     Background="{StaticResource {x:Static SystemColors.WindowBrushKey}}"
+                     BorderBrush="{DynamicResource PosLiteBorderBrush}" 
+                     Background="{DynamicResource PosLiteSurfaceBrush}"
                      BorderThickness="1">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>

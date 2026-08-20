@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:FxButton="clr-namespace:FlexButton;assembly=FlexButton" mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Border  VerticalAlignment="Stretch" Background="Gainsboro">
+    <Border  VerticalAlignment="Stretch" Background="{DynamicResource PosLiteSurfaceBrush}">
         <ItemsControl ItemsSource="{Binding ChangeTemplates}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>

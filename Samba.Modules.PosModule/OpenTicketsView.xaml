@@ -10,7 +10,7 @@
         </Grid.RowDefinitions>
 
         <ScrollViewer UIControls:KineticBehaviour.HandleKineticScrolling="True" BorderThickness="1"
-                     BorderBrush="{StaticResource {x:Static SystemColors.ActiveBorderBrushKey}}" VerticalScrollBarVisibility="Auto">
+                     BorderBrush="{DynamicResource PosLiteBorderBrush}" VerticalScrollBarVisibility="Auto">
             <ItemsControl Grid.IsSharedSizeScope="True" BorderThickness="0" ItemsSource="{Binding OpenTickets}"
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                 <ItemsControl.ItemsPanel>

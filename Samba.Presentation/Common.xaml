@@ -5,6 +5,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Samba.Presentation;component/Themes/MainExpanderResources.xaml" />
         <ResourceDictionary Source="/Samba.Presentation.Controls;component/Generic.xaml" />
+        <ResourceDictionary Source="/Samba.Presentation;component/Themes/PosLite/PosLiteControls.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <properties:Settings x:Key="Settings" />
@@ -13,12 +14,12 @@
     <Style x:Key="LeftAlignedGridCell" TargetType="{x:Type DataGridCell}">
         <Style.Triggers>
             <Trigger Property="IsSelected" Value="True">
-                <Setter Property="Background" Value="{StaticResource {x:Static SystemColors.InactiveBorderBrushKey}}" />
-                <Setter Property="Foreground" Value="{StaticResource {x:Static SystemColors.WindowTextBrushKey}}"/>
+                <Setter Property="Background" Value="{DynamicResource PosLitePrimaryPressedBrush}" />
+                <Setter Property="Foreground" Value="#FFFFFF"/>
             </Trigger>
             <Trigger Property="DataGridRow.IsFocused" Value="True">
-                <Setter Property="Background" Value="{StaticResource {x:Static SystemColors.HighlightBrushKey}}" />
-                <Setter Property="Foreground" Value="{StaticResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                <Setter Property="Background" Value="{DynamicResource PosLitePrimaryBrush}" />
+                <Setter Property="Foreground" Value="#FFFFFF"/>
             </Trigger>
         </Style.Triggers>
         <Style.Setters>
@@ -72,7 +73,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TabControl}">
-                    <Grid KeyboardNavigation.TabNavigation="Local" Background="{StaticResource {x:Static SystemColors.ControlLightBrushKey}}" >
+                    <Grid KeyboardNavigation.TabNavigation="Local" Background="{DynamicResource PosLiteWindowBackgroundBrush}" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0"/>
                             <ColumnDefinition Width="*"/>

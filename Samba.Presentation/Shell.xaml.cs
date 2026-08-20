@@ -88,6 +88,7 @@ namespace Samba.Presentation
             _timer = new DispatcherTimer();
             _timer.Tick += TimerTick;
             TimeLabel.Text = "...";
+            UpdateThemeToggleLabel();
 
 #if !DEBUG
             WindowStyle = WindowStyle.None;
@@ -205,6 +206,18 @@ namespace Samba.Presentation
                     WindowState = WindowState.Maximized;
                 }
             }
+        }
+
+        private void ThemeToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeManager.ToggleTheme();
+            UpdateThemeToggleLabel();
+            ToastService.Show(ThemeManager.CurrentTheme == ThemeManager.DarkTheme ? "Dark theme enabled" : "Light theme enabled", ToastType.Info, 1500);
+        }
+
+        private void UpdateThemeToggleLabel()
+        {
+            ThemeToggleButton.Content = ThemeManager.CurrentTheme == ThemeManager.DarkTheme ? "Light" : "Dark";
         }
 
         private void UIElement_OnMouseWheel(object sender, MouseWheelEventArgs e)
